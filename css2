@@ -1,0 +1,12 @@
+﻿@font-face {
+  font-family: 'Frijole';
+  font-style: normal;
+  font-weight: 400;
+  src: url(s/frijole/v14/uU9PCBUR8oakM2BQ7xM.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Hammersmith One';
+  font-style: normal;
+  font-weight: 400;
+  src: url(s/hammersmithone/v17/qWcyB624q4L_C4jGQ9IK0O_dFlnbsg.ttf) format('truetype');
+}

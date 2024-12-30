@@ -1,0 +1,377 @@
+@import url('./confetti.css');
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #000;
+}
+
+.game-content {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    /* background-image: url('/bg.svg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* background-color: #004b26; */
+}
+
+.container {
+    max-width: 1250px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 15px 0;
+}
+
+.header__title {
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    font-family: 'Frijole', Arial, sans-serif;
+
+}
+
+.game-section {
+    padding: 50px 0;
+}
+
+.game-section__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.game-menu__title {
+    margin: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #fff;
+    font-family: 'Frijole', Arial, sans-serif;
+}
+
+.game-menu__difficult-btn,
+.restart-btn {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    color: #222;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+    font-family: 'Frijole', Arial, sans-serif;
+}
+
+.game-menu__difficult-btn:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.game-menu__difficult-btn,
+.restart-btn {
+    padding: 15px 20px;
+    background-color: #5dc6ff;
+}
+
+.game-menu__difficult-btn:hover {
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+    background-color: #222;
+    color: #fff;
+}
+
+.game-table {
+    max-width: 500px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.game-card {
+    width: 50px;
+    height: 100px;
+    flex: 0 0 23%;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: purple;
+    border-radius: 5px;
+    transition: all 0.2s linear;
+    margin: 1%;
+}
+
+.game-card i {
+    font-size: 40px;
+    display: none;
+}
+
+.game-card i+i {
+    display: block;
+}
+
+.game-card.flip {
+    background: #5dc6ff !important;
+    transform: perspective(100px) rotateY(180deg);
+}
+
+.game-card.flip i {
+    display: block;
+    content: \f0c2 !important;
+}
+
+.game-card.flip i+i {
+    display: none;
+}
+
+.game-card.successfully {
+    background: #76db82 !important;
+}
+
+.game-card:hover {
+    background: #d1d1c0;
+}
+
+.fa-compass:before {
+    content: "";
+    display: inline-block;
+    width: 50px;
+    /* Ширина вашої іконки */
+    height: 50px;
+    /* Висота вашої іконки */
+    background-image: url('/1.svg');
+    /* Шлях до вашого зображення */
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;/
+}
+
+.fa-stop:before {
+    content: "";
+    display: inline-block;
+    width: 50px;
+    /* Ширина вашої іконки */
+    height: 50px;
+    /* Висота вашої іконки */
+    background-image: url('/2.svg');
+    /* Шлях до вашого зображення */
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;/
+}
+
+.fa-play:before {
+    content: "";
+    display: inline-block;
+    width: 50px;
+    /* Ширина вашої іконки */
+    height: 50px;
+    /* Висота вашої іконки */
+    background-image: url('/3.svg');
+    /* Шлях до вашого зображення */
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;/
+}
+
+.fa-bolt:before{
+    content: "";
+    display: inline-block;
+    width: 50px;
+    /* Ширина вашої іконки */
+    height: 50px;
+    /* Висота вашої іконки */
+    background-image: url('/4.svg');
+    /* Шлях до вашого зображення */
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;/
+}
+
+.fa-cloud:before{
+    content: "";
+    display: inline-block;
+    width: 50px;
+    /* Ширина вашої іконки */
+    height: 50px;
+    /* Висота вашої іконки */
+    background-image: url('/5.svg');
+    /* Шлях до вашого зображення */
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;/
+}
+
+.fa-basketball-ball:before{
+    content: "";
+    display: inline-block;
+    width: 50px;
+    /* Ширина вашої іконки */
+    height: 50px;
+    /* Висота вашої іконки */
+    background-image: url('/6.svg');
+    /* Шлях до вашого зображення */
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;/
+}
+.fa-atom:before{
+    content: "";
+    display: inline-block;
+    width: 50px;
+    /* Ширина вашої іконки */
+    height: 50px;
+    /* Висота вашої іконки */
+    background-image: url('/7.svg');
+    /* Шлях до вашого зображення */
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;/
+}
+
+.fa-cogs:before{
+    content: "";
+    display: inline-block;
+    width: 50px;
+    /* Ширина вашої іконки */
+    height: 50px;
+    /* Висота вашої іконки */
+    background-image: url('/8.svg');
+    /* Шлях до вашого зображення */
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;/
+}
+.img{
+    width: 100%;
+     display: block;
+      position: absolute;
+       top: -1%;
+        z-index: 40;
+            /* background-color: #004b26; */
+}
+
+.imgContainer{
+    position: relative;
+}
+
+.imgb{
+    width: 100%;
+        display: block;
+        position: absolute;
+        top: -14px;
+        z-index: 40;
+            /* background-color: #004b26; */
+}
+
+
+@media screen and (min-width: 400px) {
+    /* .img {
+
+        top: -7%;
+
+    } */
+
+        .imgb{
+    top: -23px;
+        }
+    .game-content {
+   padding: 2% 0;
+    
+    }
+
+
+}
+
+@media screen and (min-width: 620px) {
+.img {
+
+        top: -2%;
+
+    }
+.imgb {
+
+    top: -44px;
+
+}
+
+}
+
+
+@media screen and (min-width: 800px) {
+    /* .img {
+
+        top: -7%;
+
+    } */
+                .imgb {
+                    top: -50px;
+                }
+    .game-content {
+        padding: 13% 0;
+
+    }
+
+
+}
+
+@media screen and (min-width: 1024px) {
+    .img {
+
+        top: -5%;
+
+    }
+                .imgb {
+                    top: -75px;
+                }
+    .game-content {
+        padding: 13% 0;
+
+    }
+
+
+}
+@media screen and (min-width: 1540px) {
+    .img {
+
+        top: -5%;
+
+    }
+
+    .imgb {
+        top: -100px;
+    }
+
+    .game-content {
+        padding: 8% 0;
+
+    }
+
+
+}
+@media screen and (min-width: 1540px) {
+
+
+
+    .game-content {
+        padding: 8% 0;
+
+    }
+
+
+}
